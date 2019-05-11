@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import calculateTimeLeft from '../lib/calculate-time-left';
+import calculateTimeLeft from "../lib/calculate-time-left";
 
-import './CountDown.css';
+import "./CountDown.css";
 
 export default class CountDown extends Component {
   state = {
-    timeLeft: calculateTimeLeft(),
+    timeLeft: calculateTimeLeft()
   };
 
   componentDidMount() {

@@ -1,28 +1,28 @@
-import React, { Component } from 'react';
-import uniqueId from 'lodash/uniqueId';
-import CountDown from './CountDown';
-import NewItem from './NewItem';
-import Items from './Items';
+import React, { Component } from "react";
+import uniqueId from "lodash/uniqueId";
+import CountDown from "./CountDown";
+import NewItem from "./NewItem";
+import Items from "./Items";
 
-import './Application.css';
+import "./Application.css";
 
 const defaultState = [
-  { value: 'Pants', id: uniqueId(), packed: false },
-  { value: 'Jacket', id: uniqueId(), packed: false },
-  { value: 'iPhone Charger', id: uniqueId(), packed: false },
-  { value: 'MacBook', id: uniqueId(), packed: false },
-  { value: 'Sleeping Pills', id: uniqueId(), packed: true },
-  { value: 'Underwear', id: uniqueId(), packed: false },
-  { value: 'Hat', id: uniqueId(), packed: false },
-  { value: 'T-Shirts', id: uniqueId(), packed: false },
-  { value: 'Belt', id: uniqueId(), packed: false },
-  { value: 'Passport', id: uniqueId(), packed: true },
-  { value: 'Sandwich', id: uniqueId(), packed: true },
+  { value: "Pants", id: uniqueId(), packed: false },
+  { value: "Jacket", id: uniqueId(), packed: false },
+  { value: "iPhone Charger", id: uniqueId(), packed: false },
+  { value: "MacBook", id: uniqueId(), packed: false },
+  { value: "Sleeping Pills", id: uniqueId(), packed: true },
+  { value: "Underwear", id: uniqueId(), packed: false },
+  { value: "Hat", id: uniqueId(), packed: false },
+  { value: "T-Shirts", id: uniqueId(), packed: false },
+  { value: "Belt", id: uniqueId(), packed: false },
+  { value: "Passport", id: uniqueId(), packed: true },
+  { value: "Sandwich", id: uniqueId(), packed: true }
 ];
 
 class Application extends Component {
   state = {
-    items: defaultState,
+    items: defaultState
   };
 
   addItem = item => {
@@ -31,7 +31,7 @@ class Application extends Component {
 
   removeItem = item => {
     this.setState({
-      items: this.state.items.filter(other => other.id !== item.id),
+      items: this.state.items.filter(other => other.id !== item.id)
     });
   };
 

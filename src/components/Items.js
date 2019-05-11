@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import Item from './Item';
-import Filter from './Filter';
+import React, { Component } from "react";
+import Item from "./Item";
+import Filter from "./Filter";
 
 class Items extends Component {
   state = {
-    searchTerm: '',
+    searchTerm: ""
   };
 
   updateSearchTerm = searchTerm => {
@@ -22,7 +22,7 @@ class Items extends Component {
         <Filter searchTerm={searchTerm} onChange={this.updateSearchTerm} />
         {items
           .filter(item =>
-            item.value.toLowerCase().includes(searchTerm.toLowerCase()),
+            item.value.toLowerCase().includes(searchTerm.toLowerCase())
           )
           .map(item => (
             <Item

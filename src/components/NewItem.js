@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import uniqueId from 'lodash/uniqueId';
+import React, { Component } from "react";
+import uniqueId from "lodash/uniqueId";
 
-import './NewItem.css';
+import "./NewItem.css";
 
 class NewItem extends Component {
   state = {
-    value: '',
+    value: ""
   };
 
   shouldComponentUpdate(newProps, newState) {
@@ -23,7 +23,7 @@ class NewItem extends Component {
 
     event.preventDefault();
     onSubmit({ value, packed: false, id: uniqueId() });
-    this.setState({ value: '' });
+    this.setState({ value: "" });
   };
 
   render() {

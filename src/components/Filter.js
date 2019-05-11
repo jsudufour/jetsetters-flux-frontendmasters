@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import './Filter.css';
+import "./Filter.css";
 
 class Filter extends Component {
   handleChange = event => {
