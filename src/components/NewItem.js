@@ -3,6 +3,8 @@ import uniqueId from "lodash/uniqueId";
 
 import "./NewItem.css";
 
+import { addItem } from "../actions";
+
 class NewItem extends Component {
   state = {
     value: ""
@@ -18,12 +20,11 @@ class NewItem extends Component {
   };
 
   handleSubmit = event => {
-    const { onSubmit } = this.props;
     const { value } = this.state;
 
     event.preventDefault();
-    onSubmit({ value, packed: false, id: uniqueId() });
-    this.setState({ value: "" });
+
+    addItem(value);
   };
 
   render() {
